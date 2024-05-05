@@ -1,0 +1,161 @@
+:root{
+    --gray: gray;
+    --gradientBlue: linear-gradient(0deg, rgb(30, 79, 216) 0%, rgb(2, 40, 144) 100%);
+    --black : black;
+    --darkBlue: rgb(2, 40, 144);
+    --extraDarkBlue: #00081b;
+    --babyBlue: rgb(30, 79, 216);
+}
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.list-item ul{
+    list-style: none;
+    margin-top: 10px;
+}
+.list-item ul li{
+    display: inline;
+    margin: 10px;
+}
+.list-item a, .list-item button{
+   font-size: 1.2rem;
+   text-decoration: none;
+   color: var(--gray);
+   text-align: center;
+   font-weight: bold;
+}
+.list-item button{
+    border: none;
+    background: local;
+}
+.list-item button i{
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    color: white;
+    background:  var(--gradientBlue) ;
+}
+.list-item ul li a:hover{
+    color: var(--darkBlue);
+}
+
+.menu-right{
+    background-color: var(--extraDarkBlue);
+    position: fixed;
+    z-index: 999;
+    right: -1000px;
+    top:0;
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    /* opacity: 0; */
+    transition: .7s ease-in-out;
+   
+}
+.menu-right ul {
+    list-style: none;
+    padding: 20px;
+    /* background-color: aliceblue; */
+    height: 300px;
+}
+hr{
+    color: var(--gray);
+}
+.menu-right ul li{
+    padding-top: 10px;
+}
+.menu-right a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    /* padding: 10px; */
+
+}
+.menu-right button{
+    width: fit-content;
+    background: transparent;
+    border: none;
+    border-radius: 100%;
+    padding: 0;
+    color: white;
+}
+.menu-right button i{
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    
+}
+.menu-right a:hover , .menu-right button:hover{
+    color: var(--babyBlue);
+}
+.menu-disabl{
+    /* display: none !important; */
+    right: 0;
+    /* opacity: 1; */
+  
+}
+.hero{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+    
+}
+.bg-hero{
+    background: url('../images/bank_officer.webp') center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .5;
+    position: absolute;
+    z-index: -1;
+}
+.hero .row{
+    /* background-color: #00081b; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero .row h1{
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.hero .btn-service{
+    /* border: 1px solid black; */
+    text-decoration: none;
+    color: white;
+    background: var(--gradientBlue);
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all .6s ease-in;
+}
+.hero .btn-service:hover{
+    background: var(--extraDarkBlue);
+}
+
+@media (max-width:518px){
+    .list-item ul{
+        display: none;
+    }
+    .menu{
+        display: block !important;
+    }
+}
