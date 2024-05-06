@@ -5,6 +5,13 @@
     --darkBlue: rgb(2, 40, 144);
     --extraDarkBlue: #00081b;
     --babyBlue: rgb(30, 79, 216);
+    --white: #fff;
+    --light: #eee;
+    --darkGray: rgba(121, 121, 121);
+}
+
+body{
+    background:var(--light);
 }
 .navbar{
     display: flex;
@@ -65,9 +72,6 @@
 }
 hr{
     color: var(--gray);
-}
-.menu-right ul li{
-    padding-top: 10px;
 }
 .menu-right a{
     text-decoration: none;
@@ -151,6 +155,108 @@ hr{
     background: var(--extraDarkBlue);
 }
 
+.about-container .about-section{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    font-size: 1.3rem;
+}
+.about-container .about-section .about-image img{
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+}
+.about-container .about-section .about-des span{
+    color: var(--darkBlue);
+}
+.about-container .about-section .about-des .about-more{
+    text-decoration: none;
+    color: white;
+    background: var(--gradientBlue);
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all .6s ease-in;
+}
+.about-container .about-section .about-des .about-more:hover{
+    background: var(--extraDarkBlue);
+}
+
+.section-count{
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: var(--white);
+}
+.section-count .card-count{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+.section-count .card-count i{
+    font-size: 2.2rem;
+    background: var(--gradientBlue);
+    padding: 20px;
+    /* width: 70px; */
+    border-radius: 50%;
+}
+.section-count h2,.section-count p{
+    width: fit-content;
+    color: #00081b;
+}
+
+.loan-des{
+    text-align: center;
+}
+.loan-cards{
+    justify-content: space-around;
+    
+}
+.loan-cards .loan-card{
+    border: 5px solid #eee;
+    background: var(--white);
+    padding: 20px;
+    width: 350px;
+    height: 300px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* box-shadow: 1px 2px 2px 1px var(--darkGray); */
+    transition: all .6s ease-in-out;
+    
+}
+.loan-cards .loan-card i{
+    font-size: 2.2rem;
+    background: var(--gradientBlue);
+    padding: 20px;
+    width: 80px;
+    border-radius: 50%;
+    color: var(--white);
+}
+.loan-cards .loan-card:hover.loan-card h2,.loan-cards .loan-card:hover.loan-card a{
+    color: var(--babyBlue);
+}
+.loan-cards .loan-card:hover.loan-card{
+    border-color: var(--babyBlue);
+
+}
+@media (max-width:990px){
+    .about-container .about-section .about-image{
+        width: 100%;
+    }
+    .about-container .about-section .about-des{
+        width: 100%;
+    }
+
+}
 @media (max-width:518px){
     .list-item ul{
         display: none;
