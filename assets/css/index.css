@@ -104,6 +104,9 @@ hr{
     /* opacity: 1; */
   
 }
+section{
+    margin-bottom: 60px;
+}
 .hero{
     position: relative;
     z-index: 1;
@@ -214,6 +217,7 @@ hr{
 
 .loan-des{
     text-align: center;
+    margin-bottom: 30px;
 }
 .loan-cards{
     justify-content: space-around;
@@ -247,6 +251,45 @@ hr{
 .loan-cards .loan-card:hover.loan-card{
     border-color: var(--babyBlue);
 
+}
+.employee-des{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.employee-card{
+    justify-content: space-around;
+    text-align: center;
+}
+.employee-card .row{
+    background: var(--white);
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.employee-card .row:hover{
+    color: var(--darkBlue);
+}
+.employee-card .row p{
+    color: var(--darkBlue);
+}
+.employee-card .emp-img{
+    width: 100%;
+    height: 80%;
+    padding: 0;
+
+}
+.employee-card .emp-img img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border: none;
+}
+
+@media (max-width:575px){
+    .employee-card .row{
+        width: 70%;
+        margin: 20px auto;
+    }
 }
 @media (max-width:990px){
     .about-container .about-section .about-image{
