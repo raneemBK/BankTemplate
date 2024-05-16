@@ -290,31 +290,52 @@ section{
     border: none;
 }
 
-.testimonial-container{
+.testimonial-container {
     position: relative;
     width: 100%;
+    overflow: hidden; /* Ensure content is hidden beyond container */
 }
-.testimonial-container .next-testimonial,
-.testimonial-container .prev-tesimonial{
+
+.prev-testimonial,
+.next-testimonial {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%,-50%);
     cursor: pointer;
+    z-index: 1; /* Ensure buttons are above cards */
 }
-.testimonial-container .prev-tesimonial{
+
+.prev-testimonial {
     left: 0;
 }
-.testimonial-container .next-testimonial{
+
+.next-testimonial {
     right: 0;
 }
-.testimonial-container .testimonial-container-cards{
+
+.container-cards {
+    width: 100%;
+    height: auto; /* Adjust according to content */
+    overflow: hidden;
+}
+
+.testimonial-container-cards {
     display: flex;
-    width: 100%;
+    transition: transform 0.3s ease; /* Add smooth transition effect */
 }
-.testimonial-container .testimonial-container-cards .card-testimonial{
-    width: 100%;
-    box-sizing: border-box;
+
+.card-testimonial {
+    flex: 0 0 100%; /* Ensure each card takes full width */
+    width: 100%; /* Ensure each card takes full width */
+    max-width: 100%; /* Ensure each card takes full width */
+    box-sizing: border-box; /* Ensure padding and borders are included in the width */
 }
+
+.card-testimonial img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Ensure images maintain aspect ratio */
+}
+
 @media (max-width:575px){
     .employee-card .row{
         width: 70%;
