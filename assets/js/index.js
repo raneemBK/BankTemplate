@@ -43,15 +43,42 @@ menuRes.addEventListener("click",()=>{
 //   sildes.style.transform = "translateX(0px)";
 // })
 
+// var nextTestimonial = document.getElementById("next-testimonial");
+// var prevTestimonial = document.getElementById("prev-testimonial");
+// var slides = document.querySelector(".testimonial-container-cards");
+// var slideIndex = 0;
+// var slideWidth = slides.offsetWidth; // Adjust this according to your card width
+
+// nextTestimonial.addEventListener("click", () => {
+//     slideIndex++;
+//     if (slideIndex * slideWidth <= slides.scrollWidth) {
+//         slides.style.transform = "translateX(" + -slideIndex * slideWidth + "px)";
+//     } else {
+//         slideIndex--;
+//     }
+// });
+
+// prevTestimonial.addEventListener("click", () => {
+//     if (slideIndex > 0) {
+//         slideIndex--;
+//         slides.style.transform = "translateX(" + -slideIndex * slideWidth + "px)";
+//     }
+// });
+
 var nextTestimonial = document.getElementById("next-testimonial");
 var prevTestimonial = document.getElementById("prev-testimonial");
 var slides = document.querySelector(".testimonial-container-cards");
 var slideIndex = 0;
-var slideWidth = slides.offsetWidth; // Adjust this according to your card width
+
+function getSlideWidth() {
+    var card = document.querySelector(".card-testimonial");
+    return card ? card.offsetWidth : 0;
+}
 
 nextTestimonial.addEventListener("click", () => {
+    var slideWidth = getSlideWidth();
     slideIndex++;
-    if (slideIndex * slideWidth <= slides.scrollWidth) {
+    if ((slideIndex + 1) * slideWidth <= slides.scrollWidth) {
         slides.style.transform = "translateX(" + -slideIndex * slideWidth + "px)";
     } else {
         slideIndex--;
@@ -59,8 +86,15 @@ nextTestimonial.addEventListener("click", () => {
 });
 
 prevTestimonial.addEventListener("click", () => {
+    var slideWidth = getSlideWidth();
     if (slideIndex > 0) {
         slideIndex--;
         slides.style.transform = "translateX(" + -slideIndex * slideWidth + "px)";
     }
+});
+
+// Adjust slide width on window resize
+window.addEventListener("resize", () => {
+    var slideWidth = getSlideWidth();
+    slides.style.transform = "translateX(" + -slideIndex * slideWidth + "px)";
 });

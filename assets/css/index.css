@@ -296,16 +296,24 @@ section{
     overflow: hidden; /* Ensure content is hidden beyond container */
 }
 
-.prev-testimonial,
-.next-testimonial {
+
+.next-testimonial ,.prev-tesimonial {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%,-50%);
+    width: fit-content;
+    /* transform: translateY(-50%,-50%); */
     cursor: pointer;
     z-index: 1; /* Ensure buttons are above cards */
 }
+.next-testimonial button ,.prev-tesimonial button{
+    background: var(--gradientBlue);
+    color: var(--white);
+    border-radius: 20px;
+    padding: 7px;
+    border: none;
+}
 
-.prev-testimonial {
+.prev-tesimonial {
     left: 0;
 }
 
@@ -321,19 +329,51 @@ section{
 
 .testimonial-container-cards {
     display: flex;
+    width: 100%;
+    /* column-gap: 10px; */
     transition: transform 0.3s ease; /* Add smooth transition effect */
 }
 
 .card-testimonial {
-    flex: 0 0 100%; /* Ensure each card takes full width */
-    width: 100%; /* Ensure each card takes full width */
-    max-width: 100%; /* Ensure each card takes full width */
-    box-sizing: border-box; /* Ensure padding and borders are included in the width */
+    flex: 0 0 calc(50% - 10px); /* Ensure each card takes full width */
+    width: 635px;
+    /* width: 50%;  */
+    max-width: 635px;
+    box-sizing: border-box;
+    background-color: var(--white);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px var(--white) solid;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.card-testimanial-message{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .card-testimonial img {
-    max-width: 100%; /* Ensure images are responsive */
-    height: auto; /* Ensure images maintain aspect ratio */
+    margin-right: 20px;
+    /* max-width: 100%; */
+    /* width: 20px; */
+    height: 40px; /* Ensure images maintain aspect ratio */
+}
+.card-testimanial-info{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #eee; */
+}
+
+.card-testimanial-info img{
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
 }
 
 @media (max-width:575px){
@@ -343,6 +383,11 @@ section{
     }
 }
 @media (max-width:990px){
+    .card-testimonial{
+        flex: 0 0 calc(100% - 20px);
+        width: 100%; /* Ensure each card takes full width */
+    max-width: 100%; /* Ensure each card takes full width */
+    }
     .about-container .about-section .about-image{
         width: 100%;
     }
