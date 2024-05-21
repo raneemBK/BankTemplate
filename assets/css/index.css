@@ -384,7 +384,8 @@ section{
 }
 @media (max-width:990px){
     .card-testimonial{
-        flex: 0 0 calc(100% - 20px);
+        flex: 0 0 100%;
+        margin-right: 0;
         width: 100%; /* Ensure each card takes full width */
     max-width: 100%; /* Ensure each card takes full width */
     }
