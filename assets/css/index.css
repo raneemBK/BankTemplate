@@ -117,6 +117,15 @@ section{
     height: 600px;
     
 }
+.hero-sections{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+}
 .bg-hero{
     background: url('../images/bank_officer.webp') center center;
     background-repeat: no-repeat;
@@ -131,7 +140,21 @@ section{
     position: absolute;
     z-index: -1;
 }
-.hero .row{
+.bg-hero-sections{
+    background: url('../images/bank_officer.webp') center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .5;
+    position: absolute;
+    z-index: -1;
+}
+.hero .row, .hero-sections .row{
     /* background-color: #00081b; */
     display: flex;
     flex-direction: column;
@@ -139,11 +162,13 @@ section{
     align-items: center;
     text-align: center;
 }
-.hero .row h1{
+.hero .row h1, .hero-sections .row h1{
     font-size: 2.8rem;
     font-weight: bold;
 }
-
+.hero-sections span{
+    color: var(--babyBlue);
+}
 .hero .btn-service{
     /* border: 1px solid black; */
     text-decoration: none;
@@ -165,6 +190,10 @@ section{
     height: 100%;
     font-size: 1.3rem;
 }
+.about-image{
+    height: fit-content;
+}
+
 .about-container .about-section .about-image img{
     width: 100%;
     height: 100%;
@@ -349,6 +378,7 @@ section{
     border: 1px var(--white) solid;
     border-radius: 20px;
     margin-right: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .card-testimanial-message{
     display: flex;
@@ -375,11 +405,140 @@ section{
     width: 90px;
     height: 90px;
 }
+.contact-container{
+    margin: 0 auto;
+}
+.contact-container form{
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    /* width: 70ch; */
+    height: 80vh;
+    justify-content: space-evenly;
+    align-content:space-between ;
+    /* align-items: center; */
+    background-color: var(--white);
+    /* box-shadow: 1px 2px 2px 1px var(--darkGray) */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
 
+.contact-container form input {
+    margin: 0 auto;
+    width: 80%;
+    height: 60px;
+    /* border-color: var(--babyBlue); */
+    border: 1px solid var(--babyBlue);
+}
+.contact-container form textarea{
+    width: 80%;
+    height: 120px;
+    margin: 0 auto;
+    /* border-color: var(--darkBlue); */
+    border: 1px solid var(--babyBlue);
+}
+.contact-container form .submit{
+    border: none;
+    color: white;
+    background: var(--gradientBlue);
+    width: 150px;
+    height: 60px;
+    border-radius: 50px;
+    transition: all .6s ease-in;
+    margin: 0 60px;
+    font-weight: bold;
+}
+.contact-container form .submit:hover{
+    background: var(--extraDarkBlue);
+}
+.contact-des{
+    margin: -10px auto;
+    width: 57.4%;
+    text-align: center;
+    background: var(--gradientBlue);
+    /* box-shadow: 1px 2px 2px 1px var(--darkGray); */
+    color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+footer{
+    background: var(--gradientBlue);
+    color: var(--white);
+    /* height: 50vh; */
+    padding: 20px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+footer .social i{
+    border: 1px solid var(--babyBlue);
+    background-color: var(--babyBlue);
+    padding: 10px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-size: small;
+
+}
+
+footer .links ul{
+    list-style: none;
+}
+footer .links ul a{
+    color: var(--white);
+    text-decoration: none;
+    transition: all .5s ease;
+}
+footer .links ul a:hover{
+    color: var(--babyBlue);
+    padding-left: 10px;
+}
+
+footer .links ul li{
+    margin-top: 10px;
+}
+footer form{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.form{
+    width: 30ch;
+    padding-top: 20px;
+}
+footer form input{
+    padding: 0 1rem;
+    width: 100%;
+    height: 3rem;
+    outline: none !important;
+    border: solid 0;
+    margin-bottom: 0;
+    border-radius: 10px;
+    border: 1px solid rgb(212, 223, 255);
+    box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.15);
+}
+footer form .submit{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    /* bottom: 10px; */
+    border-radius: 10px;
+    background: var(--gradientBlue);
+    z-index: 1;
+    height: 2rem;
+    width: 7rem;
+    color: var(--white);
+    border: none;
+}
 @media (max-width:575px){
     .employee-card .row{
         width: 70%;
         margin: 20px auto;
+    }
+    
+}
+@media (max-width:800px){
+    .contact-des, .contact-container form{
+        width: 100%;
     }
 }
 @media (max-width:990px){
@@ -394,6 +553,7 @@ section{
     }
     .about-container .about-section .about-des{
         width: 100%;
+       
     }
 
 }
