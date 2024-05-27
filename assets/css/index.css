@@ -8,6 +8,7 @@
     --white: #fff;
     --light: #eee;
     --darkGray: rgba(121, 121, 121);
+    --lightGray: #f6faff;
 }
 
 body{
@@ -215,6 +216,23 @@ section{
     background: var(--extraDarkBlue);
 }
 
+.experiens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light);
+    height: 300px;
+    border: 5px solid var(--white);
+}
+
+.experiens img{
+    height: 50%;
+}
+.about-icons-check i{
+    color: var(--babyBlue);
+    margin-right: 10px;
+}
 .section-count{
     padding: 30px;
     height: 100%;
@@ -224,6 +242,32 @@ section{
     align-content: center;
     flex-wrap: wrap;
     background-color: var(--white);
+}
+.section-contact-cards{
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.section-contact-cards .card-contact{
+    background-color: var(--lightGray);
+    margin-right: 20px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.section-contact-cards .card-contact i{
+    font-size: 2.2rem;
+    border: 1px solid var(--babyBlue);
+    padding: 25px;
+    border-radius: 50px;
+    color: var(--babyBlue);
+    margin-bottom: 10px;
 }
 .section-count .card-count{
     display: flex;
@@ -423,6 +467,11 @@ section{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+.contact-container .contact-container-form,.contact-des-form{
+    width: 100% !important;
+    margin: auto !important;
+}
+
 .contact-container form input {
     margin: 0 auto;
     width: 80%;
@@ -554,6 +603,9 @@ footer form .submit{
     .about-container .about-section .about-des{
         width: 100%;
        
+    }
+    .contact-des-form{
+        margin-top: 20px !important;
     }
 
 }
