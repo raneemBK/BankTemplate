@@ -471,7 +471,9 @@ section{
     width: 100% !important;
     margin: auto !important;
 }
-
+.contact-des-form{
+    width: 96% !important;
+}
 .contact-container form input {
     margin: 0 auto;
     width: 80%;
@@ -509,7 +511,9 @@ section{
     color: var(--white);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-
+.google-location iframe{
+    height: 100%;
+}
 footer{
     background: var(--gradientBlue);
     color: var(--white);
