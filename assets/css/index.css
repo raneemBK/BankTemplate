@@ -583,27 +583,35 @@ footer form .submit{
     border: none;
 }
 .wrapper{
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: var(--gradientBlue);
     margin: 20px auto;
-    height: 100vh;
+    height: 100%;
     max-width: 470px;
     width: 100%;
-    padding: 20px 30px;
+    padding: 20px 30px 60px;
     border-radius: 12px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-
+    overflow: hidden;
+    margin-bottom: 40px;
 }
 .wrapper .form{
     width: 100%;
 }
+
 .form header{
     font-size: 30px;
     text-align: center;
     color: var(--white);
     font-weight: 600;
+    cursor: pointer;
+}
+.wrapper .signup{
+    padding-bottom: 20px
 }
 .wrapper form{
     display: flex;
@@ -612,6 +620,40 @@ footer form .submit{
     margin-top: 40px;
     width: 100%;
 
+}
+.form.login{
+    background-color: var(--light);
+    /* background-color: red; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 220px);
+    height: 100%;
+    border-radius: 50%;
+    bottom: -88%;
+    padding: 20px 140px;
+    z-index: 1;
+    transition: all .6s ease;
+}
+.wrapper.active .form.login{
+    bottom: -15%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-radius: 35%;
+}
+.form.login header{
+    color: #333;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.form.login input:focus{
+    box-shadow: 0 1px 0 #ddd;
+}
+.wrapper .login a{
+    color: #333;
+    text-decoration: none;
+}
+.wrapper .login a:hover{
+    text-decoration: underline;
 }
 .wrapper form input{
     height: 60px;
@@ -632,6 +674,11 @@ footer form .submit{
     cursor: pointer;
     
 
+}
+.form.login form input[type="submit"]{
+    background: var(--gradientBlue);
+    color: var(--light);
+    border: none;
 }
 .wrapper form .checkbox{
     display: flex;

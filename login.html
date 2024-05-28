@@ -62,7 +62,7 @@
     <main>
   
         <section class="wrapper">
-            <div class="form login">
+            <div class="form signup">
                 <header>Signup</header>
                 <form action="">
                     <input type="text" placeholder="Full name" required>
@@ -75,6 +75,30 @@
                     <input type="submit" value="Signup">
                 </form>
             </div>
+            <div class="form login">
+                <header>Login</header>
+                <form action="">
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <a href="">Forgot password?</a>
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+
+            <script>
+                const wrapper = document.querySelector(".wrapper");
+                const signupHeader = document.querySelector(".signup header");
+                const loginpHeader = document.querySelector(".login header");
+
+                loginpHeader.addEventListener("click",()=>{
+                    wrapper.classList.add("active");
+
+                })
+                signupHeader.addEventListener("click",()=>{
+                    wrapper.classList.remove("active");
+                    
+                })
+            </script>
         </section>
      
     </main>
